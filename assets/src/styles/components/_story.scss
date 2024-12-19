@@ -1,0 +1,48 @@
+.story {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          //padding: 3rem;
+          gap: 4rem;
+
+          @include break('mobile'){
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 8rem;
+          }  
+
+          &__profilepic{
+                    width: 60rem;
+                    display: inline-block;
+                    margin: 0 auto;
+          }
+
+          &__clients{
+                    text-align: center;
+                    
+          }
+          &__client-list{
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4rem;
+                    padding-left: 0;
+          }
+          &__client{
+                    width: 15rem;
+                    filter: grayscale(1);
+                    @include break('mobile'){
+                              width: 8rem;
+                    }  
+                    @include break('sm'){
+                              width: 6rem;
+                    }  
+          }
+
+          &__links{
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+          }
+          
+
+}

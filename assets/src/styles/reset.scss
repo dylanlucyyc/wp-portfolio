@@ -1,0 +1,81 @@
+// Document reset
+
+// Use a more-intuitive box-sizing model.
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  min-width: 300px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include break('lg') {
+    font-size: 87.5%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Form
+button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+// Media
+img, 
+picture, 
+video, 
+canvas, 
+iframe,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  font-style: italic; // Font style for the alt text in the event that the image cannot be found
+}
+
+figure {
+  margin: 0;
+}
+
+// Table
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Create a root stacking context
+#root, #__next {
+  isolation: isolate;
+}

@@ -1,0 +1,30 @@
+/* 
+==========
+Custom Font Families 
+==========
+
+Follow these steps to generate @font-face fonts (if they were not provided for you)
+1. Go to assets/fonts and delete everything in there.
+2. Go to https://transfonter.org/ and upload the fonts that were provided to you
+3. Download the kit
+4. Extract the zip and copy the files in assets/fonts
+5. Now simply change the urls and font names (font-family) in this file to match your new fonts. Remove unnecessary ones
+6. Update typography.scss with the new fonts
+*/
+
+@font-face {
+          font-family: 'FiraCode';
+          src: local('FiraCode'),
+               url('../../fonts/FiraCode.ttf') format('truetype');
+          font-display: swap;
+}
+
+@font-face {
+          font-family: 'OpenSans';
+          src: local('OpenSans'),
+               url('../../fonts/OpenSans.ttf') format('truetype');
+          font-display: swap;
+}
+
+        
+    

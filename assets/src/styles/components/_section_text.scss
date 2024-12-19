@@ -1,0 +1,47 @@
+.section-text {
+          font-weight: 300;
+          padding: 2rem;
+          p{
+                    font-weight: inherit;
+          }
+          .alignleft{
+                    float: left;
+                    margin-right: 3rem;
+                    margin-bottom: 1.2rem;
+                    @include break('mobile'){
+                              margin-right: 0;
+                    }
+          }
+          
+          .alignright{
+                    float: right;
+                    margin-left: 3rem;
+                    margin-bottom: 1.2rem;
+                    @include break('mobile'){
+                              margin-left: 0;
+                    }
+          }
+          .aligncenter{
+                    display: block;
+                    margin: 0 auto;
+          }
+
+          h1{
+                    position: relative;
+                    font-weight: 500;
+                    line-height: normal;
+                    &::before{
+                              content: url('../../images/icon-<>.svg');
+                              position: absolute;
+                              z-index: -1;
+                              left: -6rem;
+                              top: -4rem;
+                    }
+          }
+          img {
+                    @include break('mobile'){
+                              width: 100%;
+                    }
+          }
+}
+

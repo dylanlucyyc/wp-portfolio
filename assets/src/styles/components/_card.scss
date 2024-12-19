@@ -1,0 +1,32 @@
+.card{
+          display: flex;
+          gap: 2rem;
+          overflow: hidden;
+          border-radius: 10px;
+          padding: 2rem;
+
+          transition: all .2s ease-in-out;
+
+          &__list{
+                    display: flex;
+                    gap: 2rem;
+                    flex-direction: column;
+          }
+          &__image{
+                    width: 30%;
+                    img{
+                              aspect-ratio: 16/9;
+                              object-fit: cover;
+                    }
+          }
+
+          &:hover {
+                    background: rgba( 248, 250, 252, 0.25 );
+                    a{
+                              color: var(--slate-400);
+                    }
+                    .button {
+                              color: var(--slate-950);
+                    }
+          }
+}

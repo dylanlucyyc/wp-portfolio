@@ -1,0 +1,50 @@
+.flexible-layout{
+          display: grid;
+          gap: 4rem;
+          &--1{
+                    grid-template-columns: repeat(1, 1fr);
+          }
+          &--2{
+                    grid-template-columns: repeat(2, 1fr);
+          }
+          &--3{
+                    grid-template-columns: repeat(3, 1fr);
+          }
+
+          &--span-right{
+                    grid-template-columns: repeat(3, 1fr);
+                    .flexbile-layout__column:nth-child(2){
+                              grid-column: 2 / span 2;
+                            }
+
+          }
+          &--span-left{
+                    grid-template-columns: repeat(3, 1fr);
+                    .flexbile-layout__column:nth-child(1){
+                              grid-column: 1 / span 2;
+                    }
+
+          }
+
+          @include break('md'){
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
+          }
+
+          &__container{
+                    padding: 8rem 18rem;
+                    @include break('2xl'){
+                              padding: 8rem 14rem;
+                    }
+                    @include break('xl'){
+                              padding: 8rem 10rem;
+                    }
+                    @include break('lg'){
+                              padding: 4rem 8rem;
+                    }
+                    @include break('md'){
+                              padding: 4rem 4rem;
+                    }
+          }
+}

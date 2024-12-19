@@ -1,0 +1,22 @@
+.flexible-sections{
+          padding: 8rem 18rem;
+          @include break('2xl'){
+                    padding: 8rem 14rem;
+          }
+          @include break('xl'){
+                    padding: 8rem 10rem;
+          }
+          @include break('lg'){
+                    padding: 4rem 8rem;
+          }
+          @include break('md'){
+                    padding: 4rem 4rem;
+          }
+}
+
+.flexible-layout:not(:last-child){
+          margin-bottom: 4rem;
+          @include break('md'){
+                    margin-bottom: 4rem;
+          }
+}
